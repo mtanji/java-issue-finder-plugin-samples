@@ -22,7 +22,7 @@ public class OptionalAssignedNull {
         methodName3(null);
 
         List<String> list = Arrays.asList("john", "mary");
-        List<Optional> opList = list.stream().map(item -> Optional.of(item))
+        List<Optional> opList = list.stream().map(Optional::of)
                 .collect(Collectors.toList());
         // null assignment to Optional type detected
         opList.replaceAll(name -> null);
